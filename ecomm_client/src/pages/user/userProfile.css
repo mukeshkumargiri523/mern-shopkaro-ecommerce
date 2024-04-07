@@ -1,0 +1,28 @@
+.user-profile-form {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #009fff, #ec2f4b);
+  border-radius: 0.7rem;
+  form {
+    width: 70%;
+    padding: 1rem 2rem;
+    background-color: rgb(196, 236, 228);
+  }
+  h2 {
+    color: rgb(18, 125, 11);
+  }
+  label {
+    color: rgb(76, 132, 119);
+    font-weight: 500;
+  }
+  button {
+    background-color: #cd8abc;
+    font-weight: 500;
+    &:hover {
+      background-color: #c835a3;
+    }
+  }
+}

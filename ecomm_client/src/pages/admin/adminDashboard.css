@@ -1,0 +1,18 @@
+.card {
+  border: 2px solid goldenrod;
+}
+
+.card h3 {
+  padding: 2px 5px;
+  border-bottom: 2px solid rebeccapurple;
+  background-color: rgb(179, 214, 235);
+  color: rgb(8, 89, 95);
+  span {
+    color: rgb(9, 90, 9);
+  }
+}
+
+.list-group a {
+  background-color: rgb(93, 177, 129);
+  color: beige;
+}
