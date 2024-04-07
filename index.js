@@ -19,9 +19,7 @@ const app = express();
 connectDB();
 
 //middleware
-app.use(
-  express.static(path.join(__dirname, "./ecomm_client/build/index.html"))
-);
+app.use(express.static(path.join(__dirname, "./ecomm_client/build")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //app.use(morgan("dev"));
@@ -32,6 +30,11 @@ app.use("/files", express.static("files"));
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/category", categoryRouter);
 app.use("/api/v1/product", productRouter);
+
+//rest api
+app.use("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./ecomm_client/build/index.html"));
+});
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
